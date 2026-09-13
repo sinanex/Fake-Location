@@ -117,12 +117,3 @@ flutter pub get
 flutter run
 ```
 
----
-
-## ⚠️ Important Educational Note & System Restrictions
-
-This application uses standard, supported Android development APIs (`LocationManager.addTestProvider` / `setTestProviderLocation`).
-
-- It requires explicit user approval in Android **Developer Options**.
-- It does **not** bypass Android security, root devices, or alter system partitions.
-- It is intended strictly for development, testing, and educational purposes.
