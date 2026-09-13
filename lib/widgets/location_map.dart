@@ -222,9 +222,9 @@ class _LocationMapState extends State<LocationMap> {
           ),
         ),
 
-        // Search Overlay
+        // Search Overlay — pushed below status bar + floating top bar
         Positioned(
-          top: 12,
+          top: MediaQuery.of(context).padding.top + 74,
           left: 12,
           right: 12,
           child: Column(
