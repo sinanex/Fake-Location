@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 
+enum MapTypeOption {
+  googleStandard('Google Standard', 'https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'),
+  googleSatellite('Google Satellite', 'https://mt{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'),
+  googleHybrid('Google Hybrid', 'https://mt{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}'),
+  googleTerrain('Google Terrain', 'https://mt{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}'),
+  openStreetMap('OpenStreetMap', 'https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+  final String label;
+  final String tileUrl;
+  const MapTypeOption(this.label, this.tileUrl);
+}
+
 class MapService {
-  static const String openStreetMapTileUrl =
-      'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+  static const String googleStandardUrl = 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}';
+  static const String openStreetMapTileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 
   static const String userAgentPackageName = 'com.example.mock_location_app';
 
-  static const double defaultZoom = 13.0;
-  static const double maxZoom = 18.0;
+  static const double defaultZoom = 14.0;
+  static const double maxZoom = 20.0;
   static const double minZoom = 3.0;
 
   /// Custom marker builder with animated pulsing circle for current selected mock location

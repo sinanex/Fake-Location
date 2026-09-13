@@ -53,41 +53,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header banner
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.indigo.shade50,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.indigo.shade200),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.school, color: Colors.indigo, size: 36),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Educational Tool',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.indigo.shade900,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        const Text(
-                          'This app uses official Android LocationManager APIs to demonstrate native mock provider injection.',
-                          style: TextStyle(fontSize: 12, color: Colors.black87),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 24),
+
 
             // Diagnostic Status Card
             Card(
